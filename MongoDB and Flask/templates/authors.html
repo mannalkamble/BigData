@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ author_info_name }}</title>
+    <style>
+      body {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Segoe UI;
+        background-color: #fef2c0;
+      }
+      .container {
+        text-align: center;
+        border-radius: 10px;
+        border: 2px solid black;
+        padding: 20px;
+        box-shadow: 5px 5px 10px grey;
+      }
+      .image {
+        margin-bottom: 20px;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 5px 5px 10px grey; 
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        margin-bottom: 5px;
+      }
+      img {
+        width: 200px; 
+        border-radius: 10px;
+      }
+      .bio {
+        border-radius: 10px;
+        border: 2px solid black;
+        padding: 10px;
+        margin-top: 20px;
+        box-shadow: 5px 5px 10px grey; 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{ author_info_name }}</h1>
+      <img class="image" src="{{ image_url }}" alt="Author Image" width="200" height="250"> 
+      <div class="bio">
+        <p>{{ author_info_bio }}</p>
+      </div>
+      <h2>Books</h2>
+      <ul>
+        {% for book,i in zip(author_info_books,title_name) %}
+            <li><a href="https://www.amazon.com/dp/{{ book }}">{{  i  }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </body>
+</html>
