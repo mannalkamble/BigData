@@ -1,6 +1,6 @@
 # BigData
 
-This repository contains my coursework for a Big Data course. Each directory is organized by the specific assignments and topics covered in the course. Below is an overview of the assignments and their corresponding solutions.
+This repository contains projects structured around the utilization of major data technologies including PostgreSQL, MongoDB, Hadoop/MapReduce, and PySpark, covering various data manipulation and analysis techniques.
 
 # Structure
 # Relational DB Model and SQL
